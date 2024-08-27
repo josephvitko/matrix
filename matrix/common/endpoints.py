@@ -1,0 +1,30 @@
+from enum import Enum
+
+
+class FuseEndpoints(Enum):
+    """
+    Define all the endpoints for the Fuse API
+    """
+    ACCESS = "/api/access"
+    CHMOD = "/api/chmod"
+    CHOWN = "/api/chown"
+    GETATTR = "/api/getattr"
+    READDIR = "/api/readdir"
+    READLINK = "/api/readlink"
+    MKNOD = "/api/mknod"
+    RMDIR = "/api/rmdir"
+    MKDIR = "/api/mkdir"
+    STATFS = "/api/statfs"
+    UNLINK = "/api/unlink"
+    SYMLINK = "/api/symlink"
+    RENAME = "/api/rename"
+    LINK = "/api/link"
+    UTIMENS = "/api/utimens"
+    OPEN = "/api/open"
+    CREATE = "/api/create"
+    READ = "/api/read"
+    WRITE = "/api/write"
+    TRUNCATE = "/api/truncate"
+    FLUSH = "/api/flush"
+    RELEASE = "/api/release"
+    FSYNC = "/api/fsync"
