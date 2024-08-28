@@ -131,4 +131,5 @@ def main(mountpoint, root):
     FUSE(Passthrough(root), mountpoint, nothreads=True, foreground=True)
 
 if __name__ == '__main__':
-    main(sys.argv[2], sys.argv[1])
+    main("/Users/josephvitko/PycharmProjects/matrix/test/mnt_main", "/Users/josephvitko/PycharmProjects/matrix/test/root")
+    # main(sys.argv[2], sys.argv[1])
