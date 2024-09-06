@@ -1,6 +1,6 @@
 from fuse import FUSE
 
-from matrix.client.http_fs import HttpFS
+from matrix.client.fs import HttpFS
 
 
 def main(mountpoint: str, url: str):
@@ -13,4 +13,4 @@ if __name__ == '__main__':
     #     sys.exit(1)
     #
     # main(sys.argv[1], sys.argv[2])
-    main("/Users/josephvitko/PycharmProjects/matrix/test/mnt7", "http://localhost:8000")
+    main("/Users/josephvitko/PycharmProjects/matrix/test/mnt9", "http://localhost:8000")

@@ -106,7 +106,7 @@ def read(path: str, size: int, offset: int, fh: int) -> ReadOutput:
 
 def write(path: str, data: bytes, offset: int, fh: int) -> WriteOutput:
     os.lseek(fh, offset, os.SEEK_SET)
-    return WriteOutput(size=os.write(fh, data))
+    return WriteOutput(bytes_written=os.write(fh, data))
 
 def truncate(path: str, length: int, fh: int=None) -> None:
     with open(path, 'r+') as f:

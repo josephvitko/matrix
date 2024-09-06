@@ -62,7 +62,7 @@ class LinkInput(FuseInput):
 
 class UtimensInput(FuseInput):
     path: str
-    times: Optional[tuple[int, int]] = None
+    times: Optional[tuple[float, float]] = None
 
 class OpenInput(FuseInput):
     path: str
@@ -93,7 +93,7 @@ class WriteInput(FuseInput):
                 raise ValueError('Invalid base64 data') from e
         return v
 
-    def model_dump(self, *args, **kwargs):
+    def model_dump(*args, **kwargs):
         data_dict = super().model_dump(*args, **kwargs)
         data_dict['data'] = base64.b64encode(data_dict['data']).decode('utf-8')
         return data_dict
