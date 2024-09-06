@@ -148,6 +148,11 @@ class Passthrough(Operations):
 def main(mountpoint, root):
     FUSE(Passthrough(root), mountpoint, nothreads=True, foreground=True)
 
+
 if __name__ == '__main__':
-    # main(sys.argv[2], sys.argv[1])
-    main("C:\\Users\\Joseph\\dev\\AIWorkflows\\matrix\\mnt", "C:\\tmp\\test-root")
+    import sys
+
+    if len(sys.argv) != 3:
+        print(f'usage: {sys.argv[0]} <mountpoint> <root>')
+        sys.exit(1)
+    main(sys.argv[1], sys.argv[2])

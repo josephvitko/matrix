@@ -1,8 +1,8 @@
-import matrix.common.schema.input as fuse_input
-import matrix.common.schema.output as fuse_output
+import src.matrix.common.schema.input as fuse_input
+import src.matrix.common.schema.output as fuse_output
 
-from matrix.common import func
-from matrix.common.endpoints import FuseEndpoints
+from src.matrix.common import func
+from src.matrix.common.endpoints import FuseEndpoints
 
 
 endpoint_config = {
